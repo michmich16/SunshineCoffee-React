@@ -1,11 +1,9 @@
-import { Modal } from "../components/Modal/Modal";
-import { Button } from "../components/Button/Button";
+import { Header } from "../components/Header/Header"
 
 export const LandingPage = () => {
   return (
     <>
-    <Modal>Hlo</Modal>
-    <Button text="Click me"/>
+    <Header></Header>
     </>
   )
 }
