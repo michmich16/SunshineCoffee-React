@@ -1,0 +1,16 @@
+@use '../../assets/helper/helper' as *;
+
+.navStyle {
+    display: flex;
+    justify-content: end;
+    background-color: $dark;
+    .menuStyle{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        li{
+            padding: 1rem;
+            list-style: none;
+        }
+    }
+}
