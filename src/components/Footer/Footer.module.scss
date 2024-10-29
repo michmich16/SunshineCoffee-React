@@ -1,0 +1,30 @@
+@use '../../assets/helper/helper' as *;
+
+.footerStyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: $almost-black;
+    padding: 1rem 0;
+
+    div {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            p {
+                color: $almost-white;
+                margin: 1rem 0;
+            }
+
+            li {
+                list-style: none;
+                color: $almost-white;
+
+                a {
+                    color: $almost-white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

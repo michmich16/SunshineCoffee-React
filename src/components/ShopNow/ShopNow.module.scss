@@ -1,0 +1,33 @@
+@use '../../assets/helper/helper' as *;
+.shopNowStyle{
+    text-align: center;
+    margin: auto;
+    padding: 1rem 2rem;
+    border-bottom: solid 1rem $almost-black;
+    h2{
+        font-size: 128px;
+        font-family: Licorice;
+        font-weight: 400;
+        padding: 1rem;
+    }
+    p{
+        font-size: 24px;
+        font-family: Inika;
+    }
+    button{
+        margin: 1rem 0;
+        padding: 1rem 2rem;
+        width: 384px;
+        height: 84px;
+        background-color: $almost-black;
+        border-radius: 8px;
+        border: none;
+        a{
+            color: $almost-white;
+            font-size: 24px;
+            font-family: Inika;
+            font-weight: 400;
+            text-decoration: none;
+        }
+    }
+}

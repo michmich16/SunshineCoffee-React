@@ -1,0 +1,30 @@
+@use '../../assets/helper/helper' as *;
+
+.testimoniesStyle{
+    text-align: center;
+    margin: auto;
+    padding: 1rem 2rem;
+    border-bottom: solid 1rem $almost-black;
+    h2{
+        font-family: Licorice;
+        font-size: 128px;
+        font-weight: 400;
+    }
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        article{
+            h3{
+                font-size: 36px;
+                font-family: Inika;
+                font-weight: 400;
+            }
+            p{
+                font-family: Inika;
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}

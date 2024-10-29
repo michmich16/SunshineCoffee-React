@@ -11,6 +11,10 @@
         li{
             padding: 1rem;
             list-style: none;
+            a{
+                color: $almost-white;
+                text-decoration: none;
+            }
         }
     }
 }

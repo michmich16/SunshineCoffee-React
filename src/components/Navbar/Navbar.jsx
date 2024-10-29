@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return <nav className={s.navStyle}>
     <ul className={s.menuStyle}>
-      <li><NavLink>Server</NavLink></li>
+      <li><NavLink>Europa</NavLink></li>
       <li><NavLink>Cart</NavLink></li>
       <li><NavLink>User</NavLink></li>
     </ul>
