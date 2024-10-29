@@ -1,0 +1,41 @@
+@use '../../assets/helper/helper' as *;
+
+.productsStyle {
+    h2 {
+        font-family: Licorice;
+        font-size: 128px;
+        font-weight: 400;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .productsLayout {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        margin: 0 3rem;
+
+        figure {
+            background-color: $almost-white;
+            padding: 1rem 2rem;
+
+            h4 {
+                font-family: Licorice;
+                font-size: 96px;
+                font-weight: 400;
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            img {
+                // width: 349px;
+                width: 21.8rem;
+                height: 21.9rem;
+                // height: 349px;
+                object-fit: cover;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}

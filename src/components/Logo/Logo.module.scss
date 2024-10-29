@@ -1,0 +1,22 @@
+@use '../../assets/helper/helper.scss' as *;
+
+.logoContainer{
+    .logoStyle{
+        display: flex;
+        justify-content: center;
+        background-color: $almost-black;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        margin: auto;
+        z-index: 999;
+        
+        h1{
+            font-size: 48px;
+            font-family: Licorice;
+            a{
+                color: $almost-white;
+            }
+        }
+    }
+}
