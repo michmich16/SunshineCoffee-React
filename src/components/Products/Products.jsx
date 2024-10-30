@@ -1,10 +1,12 @@
 import s from './Products.module.scss';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { SingleProduct } from '../SingleProduct/SingleProduct';
+import { CartContext } from "../../context/CartContext";
 
 export const Products = () => {
     const [products, setProducts] = useState([]);
     const [selectedProductId, setSelectedProductId] = useState(null);
+    const { cartData, addToCart } = useContext(CartContext)
 
     useEffect(() => {
         fetch('http://127.0.0.1:8081/products')
@@ -29,15 +31,12 @@ export const Products = () => {
             <h2>Our picks for you</h2>
             <div className={s.productsLayout}>
                 {products.map((item) => (
-                    <figure key={item.id} onClick={() => handleFigureClick(item.id)}>
+                    <figure key={item.id}>
                         <h4>{item.name}</h4>
-                        <img src={item.image} alt={item.name} />
+                        <img src={item.image} alt={item.name} onClick={() => handleFigureClick(item.id)} />
                         <p>roast: {item.roast}</p>
                         <p>{item.price} DKK</p>
-                        <button onClick={(e) => {
-                            e.stopPropagation(); // Prevent triggering figure click
-                            addToCart(item);
-                        }}>Add To Cart</button>
+                        <button onClick={() => addToCart(item)}>Add to cart</button>
                     </figure>
                 ))}
             </div>

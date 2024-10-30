@@ -18,6 +18,7 @@ export const SingleProduct = ({ productId, onClose }) => {
             <img src={product.image} alt={product.name} />
             <p>Price: {product.price} DKK</p>
             <p>{product.description}</p>
+            <button>Add to cart</button>
         </div>
     );
 };
