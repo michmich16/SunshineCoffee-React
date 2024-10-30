@@ -21,7 +21,7 @@ export const Navbar = () => {
         <ul className={s.menuStyle}>
           <li><NavLink>Europa</NavLink></li>
           <li onClick={toggleCart}><img src={cartIcon} alt="Cart Icon" /></li>
-          <li><NavLink><img src={userIcon} alt="User Icon" /></NavLink></li>
+          <li><NavLink to={'/AccountPage'}><img src={userIcon} alt="User Icon" /></NavLink></li>
         </ul>
       </nav>
       {isCartOpen && <Cart onClose={toggleCart} />} {/* Display Cart modal only when isCartOpen is true */}

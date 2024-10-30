@@ -1,0 +1,70 @@
+.cookiesModal {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Center the modal content vertically
+    align-items: center; // Center the modal content horizontally
+    background-color: rgba(255, 255, 255, 0.9); // Optional: Add a background color
+    padding: 2rem; // Optional: Add some padding
+    border-radius: 0.5rem; // Optional: Add rounded corners
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); // Optional: Add a shadow effect
+    z-index: 99999;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .Cookie_button_accepted,
+    .Cookie_button_rejected {
+        border-radius: 0.4rem;
+        font-size: 20px;
+        text-align: center;
+        padding: 1em; // Combined padding for left and right
+        color: #eee;
+        font-weight: bold;
+        transition: background-color 600ms;
+        cursor: pointer;
+
+        &:hover {
+            transition: background-color 400ms;
+        }
+    }
+}
+
+
+.Cookie_button_accepted {
+    background-color: rgb(34, 39, 187);
+
+    &:hover {
+        background-color: rgb(8, 14, 179);
+    }
+}
+
+.Cookie_button_rejected {
+    background-color: rgb(192, 27, 27);
+
+    &:hover {
+        background-color: rgb(192, 0, 0);
+    }
+}
+
+// Optional: Add styles for the checkboxes and labels
+section {
+    margin: 1rem 0;
+
+    input[type="checkbox"] {
+        margin-right: 0.5rem; // Space between checkbox and label
+    }
+
+    label {
+        font-size: 1.5rem; // Adjust label font size as needed
+    }
+}
+
+// Optional: Add a class for when the page should not scroll
+.noScroll {
+    overflow: hidden;
+}

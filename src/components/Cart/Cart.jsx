@@ -3,12 +3,12 @@ import { CartContext } from "../../context/CartContext";
 import s from "./Cart.module.scss";
 
 export const Cart = ({ onClose }) => {
-  const { cartData, clearCart, removeFromCart, subtractFromCart, addToCart } = useContext(CartContext);
+  const { cartData, clearCart, removeFromCart, subtractFromCart, addToCart, isCartOpen } = useContext(CartContext); // Get isCartOpen from context
 
   const totalPrice = cartData.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
-    <section className={s.cartModal}>
+    <section className={`${s.cartModal} ${isCartOpen ? s.slideIn : ""}`}>
       <button onClick={onClose} className={s.closeButton}>X</button>
       <h3>Shopping Cart</h3>
       <div className={s.cartStyle}>

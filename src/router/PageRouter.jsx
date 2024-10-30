@@ -5,6 +5,7 @@ import { LandingPage } from "../pages/LandingPage";
 import { ProductsPage } from "../pages/ProductsPage";
 import { PageNotFound } from "../pages/PageNotFound";
 import { CartContextProvider } from "../context/CartContext"
+import { AccountPage } from "../pages/AccountPage";
 
 export const PageRouter = () => {
   return (
@@ -13,6 +14,7 @@ export const PageRouter = () => {
         <Route path={Paths.home} element={<MainLayout />}>
           <Route index element={<LandingPage />} />
           <Route path={`/productspage`} element={<ProductsPage />} />
+          <Route path={`/accountpage`} element={<AccountPage />} />
           <Route path={Paths.pageNotFound} element={<PageNotFound />} />
         </Route>
       </Routes>
