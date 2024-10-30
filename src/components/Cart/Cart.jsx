@@ -6,6 +6,7 @@ export const Cart = ({ onClose }) => {
   const { cartData, clearCart, removeFromCart, subtractFromCart, addToCart, isCartOpen } = useContext(CartContext); // Get isCartOpen from context
 
   const totalPrice = cartData.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalItems = cartData.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <section className={`${s.cartModal} ${isCartOpen ? s.slideIn : ""}`}>
@@ -27,8 +28,9 @@ export const Cart = ({ onClose }) => {
           </div>
         ))}
 
+        <p>Items in Cart: {totalItems}</p>
         <p>Tax (25%): {(totalPrice * 0.25).toFixed(2)} DKK</p>
-        <p><strong>Total: {totalPrice.toFixed(2)} DKK</strong></p>
+        <p>Total: {totalPrice.toFixed(2)} DKK</p>
         <button className={s.clearCartButton} onClick={() => clearCart()}>Empty Cart</button>
         <button className={s.checkoutButton}>Go to checkout</button>
       </div>

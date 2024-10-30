@@ -1,3 +1,5 @@
+@use '../../assets/helper/helper' as *;
+
 .cartModal {
   position: fixed;
   top: 0;
@@ -9,6 +11,9 @@
   transform: translateX(100%); /* Start off-screen to the right */
   transition: transform 0.3s ease;
   z-index: 999999;
+  font-family: Inika;
+  font-weight: 400;
+  margin: 0;
 
   &.slideIn {
     transform: translateX(0); /* Slide into view */
@@ -17,11 +22,20 @@
   .closeButton {
     position: absolute;
     top: 10px;
-    right: 10px;
+    left: 10px;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
+  }
+
+  h3{
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+    font-family: Licorice;
+    font-size: 48px;
+    font-weight: 400;
   }
 
   .cartStyle {
@@ -29,7 +43,6 @@
 
     .productsInCart {
       margin-bottom: 15px;
-      /* Additional styling as needed */
     }
   }
 }

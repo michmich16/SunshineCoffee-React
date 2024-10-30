@@ -8,7 +8,6 @@ export const Login = () =>{
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
         console.log('Email:', email);
         console.log('Password:', password);
 
