@@ -1,32 +1,115 @@
 @use '../../assets/helper/helper' as *;
 
-.BannerStyle{
+.BannerStyle {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4rem;
     padding: 1rem 2rem;
     margin-top: 3rem;
     border-bottom: solid 1rem $almost-black;
-    article{
-        h3{
+
+    article {
+        h3 {
             font-family: Licorice;
             font-size: 50px;
             font-weight: 400;
             margin: 1rem 0;
             text-align: center;
         }
-        p{
+
+        p {
             text-align: center;
             margin: 1rem 0;
             font-size: 16px;
             height: 7rem;
         }
-        img{
+
+        img {
             margin: 1rem 0;
-            width:  100%;
+            width: 100%;
             height: 300px;
             object-fit: cover;
             border-radius: 8px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .BannerStyle {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        border-bottom: solid 1rem $almost-black;
+
+        article {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                font-family: Licorice;
+                font-size: 50px;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                margin: 1rem 0;
+                font-size: 16px;
+                height: 7rem;
+            }
+
+            img {
+                margin: auto;
+                width: 600px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .BannerStyle {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        border-bottom: solid 1rem $almost-black;
+
+        article {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                font-family: Licorice;
+                font-size: 50px;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                margin: 1rem 0;
+                font-size: 16px;
+                height: auto;
+            }
+
+            img {
+                margin: auto;
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
         }
     }
 }

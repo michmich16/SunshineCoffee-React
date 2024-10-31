@@ -1,20 +1,24 @@
 @use '../../assets/helper/helper' as *;
-.shopNowStyle{
+
+.shopNowStyle {
     text-align: center;
     margin: auto;
     padding: 3rem 2rem;
     border-bottom: solid 1rem $almost-black;
-    h2{
+
+    h2 {
         font-size: 80px;
         font-family: Licorice;
         font-weight: 400;
         padding: 1rem;
     }
-    p{
+
+    p {
         font-size: 24px;
         font-family: Inika;
     }
-    button{
+
+    button {
         margin: 1rem 0;
         padding: 0;
         width: 300px;
@@ -28,5 +32,42 @@
         font-weight: 400;
         text-decoration: none;
         cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .shopNowStyle {
+        text-align: center;
+        margin: auto;
+        padding: 3rem 2rem;
+        border-bottom: solid 1rem $almost-black;
+
+        h2 {
+            font-size: 60px;
+            font-family: Licorice;
+            font-weight: 400;
+            padding: 1rem;
+        }
+
+        p {
+            font-size: 22px;
+            font-family: Inika;
+        }
+
+        button {
+            margin: 1rem 0;
+            padding: 0;
+            width: 300px;
+            height: 80px;
+            background-color: $almost-black;
+            border-radius: 8px;
+            border: none;
+            color: $almost-white;
+            font-size: 22px;
+            font-family: Inika;
+            font-weight: 400;
+            text-decoration: none;
+            cursor: pointer;
+        }
     }
 }

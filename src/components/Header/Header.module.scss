@@ -20,3 +20,49 @@
         font-weight: 400;
     }
 }
+
+@media only screen and (max-width: 1280px) {
+    .headerStyle {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url("/sunshine.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 30rem;
+        border-bottom: solid 1rem $almost-black;
+    
+        h2 {
+            color: $almost-white;
+            text-align: center;
+            font-size: 60px;
+            font-family: Licorice;
+            font-weight: 400;
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    .headerStyle {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url("/sunshine.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 30rem;
+        border-bottom: solid 1rem $almost-black;
+    
+        h2 {
+            color: $almost-white;
+            text-align: center;
+            font-size: 50px;
+            font-family: Licorice;
+            font-weight: 400;
+            width: 20rem;
+        }
+    }
+}

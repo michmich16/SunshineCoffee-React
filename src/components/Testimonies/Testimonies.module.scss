@@ -40,3 +40,69 @@
         }
     }
 }
+
+@media only screen and (max-width: 1280px) {
+    .testimoniesStyle{
+
+        h2{
+            font-family: Licorice;
+            font-size: 70px;
+            font-weight: 400;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: auto;
+            padding-bottom: 4rem;
+            article{
+                width: 15rem;
+                
+                h3{
+                    font-size: 30px;
+                    font-family: Inika;
+                    font-weight: 400;
+                    padding: 2rem 0;
+                }
+                p{
+                    font-family: Inika;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .testimoniesStyle{
+
+        h2{
+            font-family: Licorice;
+            font-size: 60px;
+            font-weight: 400;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: auto;
+            padding-bottom: 4rem;
+            article{
+                width: 15rem;
+                
+                h3{
+                    font-size: 24px;
+                    font-family: Inika;
+                    font-weight: 400;
+                    padding: 2rem 0;
+                }
+                p{
+                    font-family: Inika;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

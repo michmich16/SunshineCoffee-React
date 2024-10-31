@@ -104,17 +104,14 @@ export const Checkout = () => {
                         {cartData.map((item) => (
                             <div key={item.id} className={s.checkOutProducts}>
                                 <h4>{item.name}</h4>
-                                <div>
-                                    <p>x {item.quantity}</p>
-                                </div>
-                                <div>
-                                    <p>{item.price * item.quantity} DKK</p>
-                                </div>
+                                <p>x {item.quantity}</p>
+                                <p>{item.price * item.quantity} DKK</p>
+
                             </div>
                         ))}
                         <div className={s.checkoutTotal}>
                             <p >Total: </p>
-                            <p>{totalPrice.toFixed(2)} DKK</p>
+                            <p>{totalPrice} DKK</p>
                         </div>
 
                     </div>

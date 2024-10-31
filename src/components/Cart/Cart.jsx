@@ -42,7 +42,7 @@ export const Cart = ({ onClose }) => {
               </div>
             ))}
             <button className={s.clearCartButton} onClick={() => clearCart()}>Empty Cart</button>
-            <p>Tax (25%): {(totalPrice * 0.25).toFixed(2)} DKK</p>
+            <p>Tax (25%): {(totalPrice * 0.25)} DKK</p>
             <p>Total: {totalPrice.toFixed(2)} DKK</p>
             <p>Items in Cart: {totalItems}</p>
             <button className={s.checkoutButton} onClick={handleCheckout}>Go to checkout</button>

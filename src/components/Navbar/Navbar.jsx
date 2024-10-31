@@ -32,7 +32,7 @@ export const Navbar = () => {
           <li><NavLink to={'/AccountPage'}><img src={userIcon} alt="User Icon" /></NavLink></li>
         </ul>
       </nav>
-      {isCartOpen && <Cart onClose={toggleCart} />} {/* Display Cart modal only when isCartOpen is true */}
+      {isCartOpen && <Cart onClose={toggleCart} />} 
     </>
   );
 };
