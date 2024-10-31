@@ -22,12 +22,12 @@
         background-color: $almost-black;
         border-radius: 8px;
         border: none;
-        a{
-            color: $almost-white;
-            font-size: 24px;
-            font-family: Inika;
-            font-weight: 400;
-            text-decoration: none;
-        }
+        color: $almost-white;
+        font-size: 24px;
+        font-family: Inika;
+        font-weight: 400;
+        text-decoration: none;
+        cursor: pointer;
+
     }
 }

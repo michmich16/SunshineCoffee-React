@@ -18,6 +18,8 @@
         figure {
             background-color: $almost-white;
             padding: 1rem 2rem;
+            font-family: Inika;
+            font-size: 24px;
 
             h4 {
                 font-family: Licorice;
@@ -35,6 +37,25 @@
                 object-fit: cover;
                 display: block;
                 margin: auto;
+            }
+            button{
+                font-family: Inika;
+                width: 100%;
+                padding: 1rem;
+                margin: 0.75rem 0;
+                background-color: $almost-white;
+                color: $dark;
+                border: solid 1px black;
+                border-radius: 4px;
+                font-size: 24px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                
+
+                &:hover {
+                    background-color: $dark;
+                    color: $almost-white;
+                }
             }
         }
     }

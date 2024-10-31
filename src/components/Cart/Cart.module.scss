@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 500px;
+  width: 700px;
   height: 100%;
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Adjusted for right-side shadow */
@@ -25,7 +25,7 @@
     left: 10px;
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
   }
 
@@ -43,6 +43,60 @@
 
     .productsInCart {
       margin-bottom: 15px;
+      border-bottom: solid 1px $dark;
+      display: flex;
+      justify-content: space-between;
+      h4{
+        width: 10rem;
+      }
+      .quantityOption{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+        .quantityNumber{
+          font-size: 24px;
+          align-self: center;
+          border: solid 1px $dark;
+          padding: 0.5rem;
+        }
+        .productsButton{
+          border: none;
+          background-color: transparent;
+          font-size: 20px;
+          align-self: center;
+        }
+      }
+      .removeButton{
+        border: none;
+        background: none;
+        color: gray;
+        cursor: pointer;
+      }
+    }
+    .clearCartButton{
+      display: flex;
+      margin-left: auto;
+      border: none;
+      background: none;
+      color: gray;
+      cursor: pointer;
+    }
+    .checkoutButton {
+      cursor: pointer;
+      margin: 1rem 0 1rem auto; 
+      padding: 1rem 2rem;
+      width: 300px;
+      height: 84px;
+      background-color: $almost-black;
+      border-radius: 8px;
+      border: none;
+      color: $almost-white;
+      font-family: Inika;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

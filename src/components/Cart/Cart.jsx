@@ -23,22 +23,22 @@ export const Cart = ({ onClose }) => {
         {cartData.map((item) => (
           <div className={s.productsInCart} key={item.id}>
             <h4>{item.name}</h4>
-            <div>
-              <button onClick={() => subtractFromCart(item)}>-</button>
-              <p>{item.quantity}</p>
-              <button onClick={() => addToCart(item)}>+</button>
+            <div className={s.quantityOption}>
+              <button onClick={() => subtractFromCart(item)} className={s.productsButton}>-</button>
+              <p className={s.quantityNumber}>{item.quantity}</p>
+              <button onClick={() => addToCart(item)} className={s.productsButton}>+</button>
             </div>
             <div>
               <p>Price: {item.price * item.quantity} DKK</p>
-              <button onClick={() => removeFromCart(item)}>Remove from cart</button>
+              <button onClick={() => removeFromCart(item)} className={s.removeButton}>Remove</button>
             </div>
           </div>
         ))}
+        <button className={s.clearCartButton} onClick={() => clearCart()}>Empty Cart</button>
 
-        <p>Items in Cart: {totalItems}</p>
         <p>Tax (25%): {(totalPrice * 0.25).toFixed(2)} DKK</p>
         <p>Total: {totalPrice.toFixed(2)} DKK</p>
-        <button className={s.clearCartButton} onClick={() => clearCart()}>Empty Cart</button>
+        <p>Items in Cart: {totalItems}</p>
         <button className={s.checkoutButton} onClick={handleCheckout}>Go to checkout</button>
       </div>
     </section>

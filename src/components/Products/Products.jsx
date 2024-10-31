@@ -14,7 +14,7 @@ export const Products = () => {
             .then((data) => setProducts(data));
     }, []);
 
-    console.log(products);
+    // console.log(products);
 
     const handleFigureClick = (id) => {
         setSelectedProductId(id);
