@@ -1,12 +1,19 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import s from "./Cart.module.scss";
+import { useNavigate } from "react-router-dom";
 
 export const Cart = ({ onClose }) => {
-  const { cartData, clearCart, removeFromCart, subtractFromCart, addToCart, isCartOpen } = useContext(CartContext); // Get isCartOpen from context
-
+  const { cartData, clearCart, removeFromCart, subtractFromCart, addToCart, isCartOpen } = useContext(CartContext);
+  const navigate = useNavigate();
+  
   const totalPrice = cartData.reduce((total, item) => total + item.price * item.quantity, 0);
   const totalItems = cartData.reduce((total, item) => total + item.quantity, 0);
+
+  const handleCheckout = () => {
+    navigate("/checkoutpage"); // redirect to checkoutPage
+    onClose()
+  };
 
   return (
     <section className={`${s.cartModal} ${isCartOpen ? s.slideIn : ""}`}>
@@ -32,7 +39,7 @@ export const Cart = ({ onClose }) => {
         <p>Tax (25%): {(totalPrice * 0.25).toFixed(2)} DKK</p>
         <p>Total: {totalPrice.toFixed(2)} DKK</p>
         <button className={s.clearCartButton} onClick={() => clearCart()}>Empty Cart</button>
-        <button className={s.checkoutButton}>Go to checkout</button>
+        <button className={s.checkoutButton} onClick={handleCheckout}>Go to checkout</button>
       </div>
     </section>
   );

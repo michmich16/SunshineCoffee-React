@@ -1,0 +1,160 @@
+@use '../../assets/helper/helper' as *;
+
+.checkoutStyle {
+  margin-top: 12rem;
+  margin-bottom: 20rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: Licorice;
+    font-size: 100px;
+    font-weight: 400;
+  }
+
+  .checkoutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 2rem;
+    font-family: Inika;
+
+    .checkoutInputStyle {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+      }
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid $dark;
+        border-radius: 4px;
+
+        &:focus {
+          border-color: rgb(34, 39, 187);
+          outline: none;
+        }
+      }
+    }
+
+    .checkoutInfo {
+      width: 40vw;
+
+      .checkoutCart {
+        .checkOutProducts {
+          font-family: Inika;
+          font-size: 28px;
+          font-weight: 400;
+        }
+
+        .checkOutProducts {
+          display: flex;
+          justify-content: space-between;
+          padding: 2rem 0;
+          border-bottom: solid 1px black;
+        }
+
+        .checkoutTotal {
+          display: flex;
+          justify-content: space-between;
+          font-size: 28px;
+          font-weight: 400;
+          padding: 2rem 0;
+        }
+      }
+
+      .checkoutShipping {
+        margin-top: 2rem;
+        border: solid 1px black;
+        border-radius: 8px;
+
+        h4 {
+          text-align: center;
+          padding: 2rem 0;
+          font-family: Inika;
+          font-size: 24px;
+          font-weight: 400;
+        }
+
+        .radioContainer {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          font-size: 22px;
+          user-select: none;
+
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+
+          .radioCheckmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+
+            &:after {
+              content: "";
+              position: absolute;
+              display: none;
+              top: 9px;
+              left: 9px;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: white;
+            }
+          }
+
+          &:hover input~.radioCheckmark {
+            background-color: #ccc;
+          }
+
+          input:checked~.radioCheckmark {
+            background-color: #2196F3;
+
+            &:after {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .payButton {
+        padding: 1rem;
+        display: flex;
+        justify-content: end;
+
+        button {
+          cursor: pointer;
+          margin: 1rem 0;
+          padding: 1rem 2rem;
+          width: 384px;
+          height: 84px;
+          background-color: $almost-black;
+          border-radius: 8px;
+          border: none;
+          color: $almost-white;
+          font-family: Inika;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+}
