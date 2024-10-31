@@ -1,19 +1,36 @@
 @use '../../assets/helper/helper' as *;
+
 .navStyle {
-    display: flex;
-    justify-content: end;
+    display: flex-reverse;
+    justify-content: space-between;
+    align-items: center; 
     background-color: $dark;
-    height: 4rem;
+    height: 5rem;
     position: relative;
-    
+    padding: 0 2rem; 
+
+    .hamburger {
+        display: none; 
+        background: none;
+        border: none;
+        color: $almost-white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 99;
+
+        &.open {
+            // Add any styles for the open state if needed
+        }
+    }
 
     .menuStyle {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end; 
+        align-items: center; 
 
         li {
-            padding: 1rem;
+            padding: 1rem 1rem; 
             list-style: none;
             z-index: 99;
             cursor: pointer;
@@ -21,6 +38,43 @@
             a {
                 color: $almost-white;
                 text-decoration: none;
+            }
+
+            .regionMenu {
+                border: solid 1px white;
+                border-radius: 8px;
+                padding: 3px 5px;
+                width: 4rem; 
+                text-align: center; 
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        .hamburger {
+            display: flex; /* Show hamburger on mobile */
+            align-items: center; /* Center vertically in the navbar */
+            justify-content: center; /* Center horizontally */
+            height: 100%; /* Make hamburger take full height */
+        }
+
+        .menuStyle {
+            display: none; /* Hide menu by default */
+            flex-direction: column; /* Stack items vertically */
+            position: absolute; /* Position absolute to overlay */
+            right: 0;
+            top: 5rem; /* Position below navbar */
+            padding-top: 5rem;
+            background-color: $dark; /* Background color for the menu */
+            width: 100%; /* Full width */
+
+            &.active {
+                display: flex; /* Show menu when active */
+            }
+
+            li {
+                padding: 1rem; /* Padding for mobile */
+                text-align: center; /* Center text for mobile menu items */
             }
         }
     }
@@ -39,7 +93,7 @@
         justify-content: center;
         z-index: 999;
 
-        img{
+        img {
             padding-top: 3rem;
             filter: invert(1);
             width: 80px;
@@ -54,7 +108,7 @@
             position: absolute;
             top: 3rem;
             cursor: pointer;
-            z-index: 9999;
+
             a {
                 color: $almost-white;
                 text-decoration: none;

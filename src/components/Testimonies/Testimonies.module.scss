@@ -3,22 +3,34 @@
 .testimoniesStyle{
     text-align: center;
     margin: auto;
-    padding: 1rem 2rem;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
     border-bottom: solid 1rem $almost-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     h2{
         font-family: Licorice;
-        font-size: 128px;
+        font-size: 80px;
         font-weight: 400;
     }
     section{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 2rem;
+        gap: 6rem;
+        margin: auto;
+        padding-bottom: 4rem;
         article{
+            width: 15rem;
+            
             h3{
-                font-size: 36px;
+                font-size: 30px;
                 font-family: Inika;
                 font-weight: 400;
+                padding: 2rem 0;
             }
             p{
                 font-family: Inika;
