@@ -1,5 +1,4 @@
 @use '../../assets/helper/helper' as *;
-
 .footerStyle {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -25,6 +24,49 @@
                     text-decoration: none;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .footerStyle {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $almost-black;
+        padding: 1rem 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            width: auto;
+
+            ul {
+                p {
+                    color: $almost-white;
+                    margin: 1rem 0;
+                }
+
+                li {
+                    list-style: none;
+                    color: $almost-white;
+
+                    a {
+                        color: $almost-white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .aboutUsFooter {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            margin: auto;
+            grid-column: 1 / -1; 
         }
     }
 }

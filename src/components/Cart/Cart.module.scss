@@ -29,6 +29,7 @@
   font-family: Inika;
   font-weight: 400;
   margin: 0;
+  overflow: scroll;
 
   &.slideIn {
     transform: translateX(0); /* Slide into view */
@@ -112,6 +113,115 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .cartModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Adjusted for right-side shadow */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.3s ease;
+    z-index: 999999;
+    font-family: Inika;
+    font-weight: 400;
+    margin: 0;
+  
+    &.slideIn {
+      transform: translateX(0); /* Slide into view */
+    }
+  
+    .closeButton {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: none;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  
+    h3{
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
+      font-family: Licorice;
+      font-size: 48px;
+      font-weight: 400;
+    }
+  
+    .cartStyle {
+      padding: 15px;
+  
+      .productsInCart {
+        margin-bottom: 15px;
+        border-bottom: solid 1px $dark;
+        display: flex;
+        justify-content: space-between;
+        h4{
+          font-size: 15px;
+          width: 7rem;
+          font-weight: 400;
+        }
+        p{
+          font-size: 15px;
+        }
+        .quantityOption{
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+          padding-bottom: 0.5rem;
+          .quantityNumber{
+            font-size: 15px;
+            align-self: center;
+            border: solid 1px $dark;
+            padding: 0.5rem;
+          }
+          .productsButton{
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            align-self: center;
+          }
+        }
+        .removeButton{
+          border: none;
+          background: none;
+          color: gray;
+          cursor: pointer;
+        }
+      }
+      .clearCartButton{
+        display: flex;
+        margin-left: auto;
+        border: none;
+        background: none;
+        color: gray;
+        cursor: pointer;
+      }
+      .checkoutButton {
+        cursor: pointer;
+        margin: 1rem 0 1rem auto; 
+        padding: 1rem 2rem;
+        width: 300px;
+        height: 84px;
+        background-color: $almost-black;
+        border-radius: 8px;
+        border: none;
+        color: $almost-white;
+        font-family: Inika;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

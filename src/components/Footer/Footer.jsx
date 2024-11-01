@@ -17,13 +17,13 @@ export const Footer = () => {
             <div>
                 <ul>
                     <p>Legal</p>
-                    <li><NavLink>Cookie policy</NavLink></li>
-                    <li><NavLink>Return policy</NavLink></li>
+                    <li><NavLink to={'/CookiesPolicyPage'}>Cookie policy</NavLink></li>
+                    <li><NavLink to={'/ReturnPolicyPage'}>Return policy</NavLink></li>
                     <li><NavLink>Shipping</NavLink></li>
                     <li><NavLink>Terms and Conditions</NavLink></li>
                 </ul>
             </div>
-            <div>
+            <div className={s.aboutUsFooter}>
                 <ul>
                     <p>About</p>
                     <li><NavLink>History</NavLink></li>

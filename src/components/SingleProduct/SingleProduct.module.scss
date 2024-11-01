@@ -1,0 +1,308 @@
+@use '../../assets/helper/helper' as *;
+
+.returnButton {
+    display: flex;
+    background: none;
+    border: none;
+    font-family: Inika;
+    margin: 2rem 2rem;
+    cursor: pointer;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.singleProductSyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+
+    .singleProductImgContainer {
+        img {
+            width: 700px;
+            height: 800px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .singleProductInfoContainer {
+        h2 {
+            font-family: Licorice;
+            font-size: 70px;
+            font-weight: 400;
+            padding-bottom: 1rem;
+        }
+
+        p {
+            font-family: Inika;
+            padding-bottom: 0.5rem;
+            font-size: 20px;
+        }
+
+        .singleProductPrice {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .addToCartButton {
+            font-family: Inika;
+            width: 375px;
+            padding: 1rem;
+            margin: 0.75rem 0;
+            background-color: $almost-white;
+            color: $dark;
+            border: solid 1px black;
+            border-radius: 4px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+
+            &:hover {
+                background-color: $dark;
+                color: $almost-white;
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 1150px) {
+    .returnButton {
+        display: flex;
+        background: none;
+        border: none;
+        font-family: Inika;
+        margin: 2rem 2rem;
+        cursor: pointer;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .singleProductSyle {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem;
+
+        .singleProductImgContainer {
+            img {
+                width: 500px;
+                height: 600px;
+                object-fit: cover;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .singleProductInfoContainer {
+            h2 {
+                font-family: Licorice;
+                font-size: 70px;
+                font-weight: 400;
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-family: Inika;
+                padding-bottom: 0.5rem;
+                font-size: 20px;
+            }
+
+            .singleProductPrice {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .addToCartButton {
+                font-family: Inika;
+                width: 300px;
+                padding: 1rem;
+                margin: 0.75rem 0;
+                background-color: $almost-white;
+                color: $dark;
+                border: solid 1px black;
+                border-radius: 4px;
+                font-size: 24px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+
+                &:hover {
+                    background-color: $dark;
+                    color: $almost-white;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .returnButton {
+        display: flex;
+        background: none;
+        border: none;
+        font-family: Inika;
+        margin: 2rem 2rem;
+        cursor: pointer;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .singleProductSyle {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+
+        .singleProductImgContainer {
+            img {
+                width: 500px;
+                height: 600px;
+                object-fit: cover;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .singleProductInfoContainer {
+            h2 {
+                font-family: Licorice;
+                font-size: 70px;
+                font-weight: 400;
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-family: Inika;
+                padding-bottom: 0.5rem;
+                font-size: 20px;
+            }
+
+            .singleProductPrice {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .addToCartButton {
+                font-family: Inika;
+                width: 300px;
+                padding: 1rem;
+                margin: 0.75rem 0;
+                background-color: $almost-white;
+                color: $dark;
+                border: solid 1px black;
+                border-radius: 4px;
+                font-size: 24px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+
+                &:hover {
+                    background-color: $dark;
+                    color: $almost-white;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+    .returnButton {
+        display: flex;
+        background: none;
+        border: none;
+        font-family: Inika;
+        margin: 2rem 2rem;
+        cursor: pointer;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .singleProductSyle {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+
+        .singleProductImgContainer {
+            img {
+                width: 300px;
+                height: 400px;
+                object-fit: cover;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .singleProductInfoContainer {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2rem;
+            justify-content: center;
+            margin: auto;
+            h2 {
+                font-family: Licorice;
+                font-size: 50px;
+                font-weight: 400;
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-family: Inika;
+                padding-bottom: 0.5rem;
+                font-size: 20px;
+            }
+
+            .singleProductPrice {
+                font-size: 24px;
+                font-weight: bold;
+                padding-bottom: 1rem;
+            }
+
+            .addToCartButton {
+                font-family: Inika;
+                width: 270px;
+                padding: 1rem;
+                margin: auto;
+                background-color: $almost-white;
+                color: $dark;
+                border: solid 1px black;
+                border-radius: 4px;
+                font-size: 24px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+
+                &:hover {
+                    background-color: $dark;
+                    color: $almost-white;
+                }
+            }
+        }
+
+
+    }
+
+}

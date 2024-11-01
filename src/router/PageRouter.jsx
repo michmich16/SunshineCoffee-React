@@ -7,6 +7,8 @@ import { PageNotFound } from "../pages/PageNotFound";
 import { CartContextProvider } from "../context/CartContext";
 import { AccountPage } from "../pages/AccountPage";
 import { CheckoutPage } from "../pages/CheckoutPage";
+import { CookiePolicy } from "../pages/CookiesPolicyPage";
+import { ReturnPolicy } from "../pages/ReturnPolicyPage";
  
 export const PageRouter = () => {
   return (
@@ -17,6 +19,8 @@ export const PageRouter = () => {
           <Route path={`/productspage`} element={<ProductsPage />} />
           <Route path={`/accountpage`} element={<AccountPage />} />
           <Route path={`/checkoutpage`} element={<CheckoutPage />} />
+          <Route path={`/cookiespolicypage`} element={<CookiePolicy />} />
+          <Route path={`/returnpolicypage`} element={<ReturnPolicy />} />
           <Route path={Paths.pageNotFound} element={<PageNotFound />} />
         </Route>
       </Routes>
