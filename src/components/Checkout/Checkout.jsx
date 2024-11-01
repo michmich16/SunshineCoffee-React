@@ -14,19 +14,54 @@ export const Checkout = () => {
     const [country, setCountry] = useState('');
     const [selectedShipping, setSelectedShipping] = useState('FakeEx');
 
+    const [errors, setErrors] = useState({});
+
     const totalPrice = cartData.reduce((total, item) => total + item.price * item.quantity, 0);
+
+    const validateInputs = () => {
+        const errors = {};
+
+        if (!/^[a-zA-Z]+$/.test(firstname)) {
+            errors.firstname = "First name should only contain letters.";
+        }
+        if (!/^[a-zA-Z]+$/.test(lastname)) {
+            errors.lastname = "Last name should only contain letters.";
+        }
+        if (!/^[a-zA-Z0-9\s,.'-]{3,}$/.test(address)) {
+            errors.address = "Address should be alphanumeric and at least 3 characters long.";
+        }
+        if (!/^[a-zA-Z\s]+$/.test(city)) {
+            errors.city = "City should only contain letters.";
+        }
+        if (!/^\d{8,15}$/.test(phone)) {
+            errors.phone = "Phone should be numeric and between 8 to 15 digits.";
+        }
+        if (!/^[a-zA-Z\s]+$/.test(province)) {
+            errors.province = "Province should only contain letters.";
+        }
+        if (!/^[a-zA-Z\s]+$/.test(country)) {
+            errors.country = "Country should only contain letters.";
+        }
+
+        setErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Customer:', firstname, lastname, 'Address:', address, city, province, country, 'Telephone:', phone);
+        if (validateInputs()) {
+            console.log('Customer:', firstname, lastname, 'Address:', address, city, province, country, 'Telephone:', phone);
 
-        setFirstname('');
-        setLastname('');
-        setAddress('');
-        setCity('');
-        setPhone('');
-        setProvince('');
-        setCountry('');
+            // Clear input fields and errors
+            setFirstname('');
+            setLastname('');
+            setAddress('');
+            setCity('');
+            setPhone('');
+            setProvince('');
+            setCountry('');
+            setErrors({});
+        }
     };
 
     return (
@@ -46,6 +81,8 @@ export const Checkout = () => {
                             onChange={(e) => setFirstname(e.target.value)}
                             required
                         />
+                        {errors.firstname && <p className={s.errorMessage}>{errors.firstname}</p>}
+
                         <label htmlFor="lastname">Last name</label>
                         <input
                             type="text"
@@ -54,6 +91,8 @@ export const Checkout = () => {
                             onChange={(e) => setLastname(e.target.value)}
                             required
                         />
+                        {errors.lastname && <p className={s.errorMessage}>{errors.lastname}</p>}
+
                         <label htmlFor="address">Address</label>
                         <input
                             type="text"
@@ -62,6 +101,8 @@ export const Checkout = () => {
                             onChange={(e) => setAddress(e.target.value)}
                             required
                         />
+                        {errors.address && <p className={s.errorMessage}>{errors.address}</p>}
+
                         <label htmlFor="city">City</label>
                         <input
                             type="text"
@@ -70,14 +111,18 @@ export const Checkout = () => {
                             onChange={(e) => setCity(e.target.value)}
                             required
                         />
+                        {errors.city && <p className={s.errorMessage}>{errors.city}</p>}
+
                         <label htmlFor="phone">Phone</label>
                         <input
-                            type="number"
+                            type="text"
                             id="phone"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             required
                         />
+                        {errors.phone && <p className={s.errorMessage}>{errors.phone}</p>}
+
                         <label htmlFor="province">Province</label>
                         <input
                             type="text"
@@ -86,6 +131,8 @@ export const Checkout = () => {
                             onChange={(e) => setProvince(e.target.value)}
                             required
                         />
+                        {errors.province && <p className={s.errorMessage}>{errors.province}</p>}
+
                         <label htmlFor="country">Country</label>
                         <input
                             type="text"
@@ -94,6 +141,12 @@ export const Checkout = () => {
                             onChange={(e) => setCountry(e.target.value)}
                             required
                         />
+                        {errors.country && <p className={s.errorMessage}>{errors.country}</p>}
+
+                        {/* Move the Pay Now button inside the form */}
+                        <div className={s.payButton}>
+                            <button type="submit">Pay Now</button>
+                        </div>
                     </form>
                 </div>
 
@@ -106,14 +159,12 @@ export const Checkout = () => {
                                 <h4>{item.name}</h4>
                                 <p>x {item.quantity}</p>
                                 <p>{item.price * item.quantity} DKK</p>
-
                             </div>
                         ))}
                         <div className={s.checkoutTotal}>
-                            <p >Total: </p>
+                            <p>Total: </p>
                             <p>{totalPrice} DKK</p>
                         </div>
-
                     </div>
                     <div className={s.checkoutShipping}>
                         <h4>Choose Shipping</h4>
@@ -137,9 +188,6 @@ export const Checkout = () => {
                             />
                             <span className={s.radioCheckmark}></span>
                         </label>
-                    </div>
-                    <div className={s.payButton}>
-                        <button>Pay Now</button>
                     </div>
                 </div>
             </div>
